@@ -1,5 +1,5 @@
 rl <- function(){
-    source("f_PolMean.R")
+    source("PollutantMean.R")
 }
 
 pollutantmean <- function(directory, pollutant, id = 1:332) {
