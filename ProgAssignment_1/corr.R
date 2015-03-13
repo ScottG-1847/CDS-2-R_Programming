@@ -22,24 +22,20 @@ corr <- function(directory, threshold = 0) {
 		## Count complete cases
 		cc <- sum(complete.cases(df))
 
-		if (cc >= threshold) {
+		if (cc > threshold) {
 		## save the data
-			df2 <- df[complete.cases(df),]
+			df2 <- na.omit(df)
 			
 			n <- df2$nitrate
 			s <- df2$sulfate
 			
 			c <- cor(s, n)
-			c <- round(c, 5)
 			correlations <- c(correlations, c)
 		}
 		
 		## Unload source data
 		rm(df)
-		
 	}
 	
 	correlations
-	
-
 }
