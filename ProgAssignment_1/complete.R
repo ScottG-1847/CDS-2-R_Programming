@@ -7,10 +7,10 @@ complete <- function(directory, fid = 1:332) {
 		iStr <- toString(i)
 		iLen <- nchar(iStr)
 		
-		switch(iLen,
-		pad <- "00",
-		pad <- "0",
-		pad <- ""
+		switch(	iLen,
+			pad <- "00",
+			pad <- "0",
+			pad <- ""
 		)
 		
 		fileName <- paste(directory, "/", pad, i, ".csv", sep="")
@@ -26,7 +26,6 @@ complete <- function(directory, fid = 1:332) {
 		
 		## Unload source data
 		rm(df)
-		
 	}
 	
 	result <- data.frame(id, nobs)
