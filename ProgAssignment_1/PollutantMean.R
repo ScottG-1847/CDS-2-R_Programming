@@ -30,7 +30,7 @@ complete <- function(directory, fid = 1:332) {
 	}
 	
 	result <- data.frame(id, nobs)
-	print(result)
+	result
 }
 
 
